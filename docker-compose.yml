@@ -1,0 +1,35 @@
+version: '2.4'
+
+services:
+  db:
+    image: mariadb:10
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_USER=timelimit
+      - MYSQL_PASSWORD=timelimitpassword
+      - MYSQL_DATABASE=timelimit
+    volumes:
+      - ./mysql:/var/lib/mysql
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1
+      interval: 20s
+      timeout: 3s
+  api:
+    container_name: timelimit
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=mariadb://timelimit:timelimitpassword@db:3306/timelimit
+      - PORT=8080
+      - MAIL_SENDER=me@my.timelimit.server
+      - 'MAIL_TRANSPORT={"host": "localhost", "port": 25}'
+      - ALWAYS_PRO='yes'
+    ports:
+      - 8080:8080/tcp
+    healthcheck:
+      test: nc -z 127.0.0.1 8080
+      interval: 1m
+      timeout: 3s
