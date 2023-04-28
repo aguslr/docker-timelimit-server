@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_BASE: node:16-alpine
+  IMAGE_BASE: library/node:16-alpine
   REPO_NAME: ${{ github.event.repository.name }}
   DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}

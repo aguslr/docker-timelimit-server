@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=node:16-alpine
+ARG BASE_IMAGE=library/node:16-alpine
 
 FROM docker.io/${BASE_IMAGE}
 
