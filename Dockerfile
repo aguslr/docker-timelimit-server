@@ -3,7 +3,7 @@ ARG BASE_IMAGE=library/node:16-alpine
 FROM docker.io/${BASE_IMAGE}
 
 ARG TIMELIMIT_REPO=https://codeberg.org/timelimit/timelimit-server
-ARG TIMELIMIT_TAG=2023-04-11
+ARG TIMELIMIT_TAG=2023-06-13
 
 WORKDIR /opt/timelimit
 RUN \
