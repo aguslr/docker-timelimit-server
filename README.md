@@ -1,7 +1,7 @@
 [aguslr/docker-timelimit-server][1]
 ===================================
 
-[![publish-docker-image](https://github.com/aguslr/docker-timelimit-server/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/aguslr/docker-timelimit-server/actions/workflows/docker-publish.yml) [![docker-pulls](https://img.shields.io/docker/pulls/aguslr/timelimit-server)](https://hub.docker.com/r/aguslr/timelimit-server) [![image-size](https://img.shields.io/docker/image-size/aguslr/timelimit-server/latest)](https://hub.docker.com/r/aguslr/timelimit-server)
+[![docker-pulls](https://img.shields.io/docker/pulls/aguslr/timelimit-server)](https://hub.docker.com/r/aguslr/timelimit-server) [![image-size](https://img.shields.io/docker/image-size/aguslr/timelimit-server/latest)](https://hub.docker.com/r/aguslr/timelimit-server)
 
 
 This *Docker* image sets up *TimeLimit Server* inside a docker container.
