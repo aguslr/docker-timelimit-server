@@ -29,7 +29,3 @@ services:
       - ALWAYS_PRO='yes'
     ports:
       - 8080:8080/tcp
-    healthcheck:
-      test: nc -z 127.0.0.1 8080
-      interval: 1m
-      timeout: 3s
