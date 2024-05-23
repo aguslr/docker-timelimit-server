@@ -6,17 +6,14 @@ on:
   pull_request:
     branches:
       - main
-    paths-ignore:
-      - '.git*'
-      - 'docker-compose.yml'
-      - 'README.*'
+    paths:
+      - .github/**
+      - Dockerfile
   push:
     branches:
       - main
-    paths-ignore:
-      - '.git*'
-      - 'docker-compose.yml'
-      - 'README.*'
+    paths:
+      - Dockerfile
   workflow_dispatch:
 
 env:
