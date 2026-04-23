@@ -12,7 +12,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     healthcheck:
-      test: mysqladmin ping -h 127.0.0.1
+      test: mysqladmin ping -h 127.0.0.1 -prootpassword
       interval: 20s
       timeout: 3s
   api:
@@ -26,6 +26,6 @@ services:
       - PORT=8080
       - MAIL_SENDER=me@my.timelimit.server
       - 'MAIL_TRANSPORT={"host": "localhost", "port": 25}'
-      - ALWAYS_PRO='yes'
+      - ALWAYS_PRO=yes
     ports:
       - 8080:8080/tcp
